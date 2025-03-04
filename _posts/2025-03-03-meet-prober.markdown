@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Meet prober! A simple tool to tech some k8s behaviors"
+title:  "Meet prober! A simple tool to teach some k8s behaviors"
 date:   2025-03-03 17:40:58 +0000
 categories: k8s prober
 ---
