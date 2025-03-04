@@ -3,5 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-.DS-Store
 Gemfile.lock
+# Mac
+.DS_Store

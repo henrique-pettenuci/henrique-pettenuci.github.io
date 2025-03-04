@@ -21,9 +21,10 @@
 title: Henrique Pettenuci
 email: henrique@pettenuci.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Myy personal website. A place where I share my experience, projects and ideas.
+  This is my personal website. A place that I use to share my experience,
+  projects and projects.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://hpettenuci.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hmp_pc
 github_username:  hpettenuci
 
