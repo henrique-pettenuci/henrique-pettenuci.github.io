@@ -2,7 +2,7 @@
 layout: post
 title:  "Meet prober! A simple tool to teach some k8s behaviors"
 date:   2025-03-03 17:40:58 +0000
-categories: k8s prober
+categories: prober
 ---
 
 Some months ago, I created `prober` – a tool designed to help developers understand the behavior of Kubernetes probes. I used it to simulate both success and failure cases while exploring different configurations and scenarios.
