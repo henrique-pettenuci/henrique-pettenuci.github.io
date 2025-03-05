@@ -10,6 +10,7 @@ url: "https://www.pettenuci.com" # the base hostname & protocol for your site, e
 twitter_username: hmp_pc
 github_username:  hpettenuci
 linkedin_username: hpettenuci
+google_analytics: G-8WS4RVS07C
 
 # Build settings
 theme: minima
