@@ -6,7 +6,7 @@ description: >-
   This is my personal website. A place that I use to share my daily experiences,
   projects and ideas.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://hpettenuci.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.pettenuci.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hmp_pc
 github_username:  hpettenuci
 linkedin_username: hpettenuci
