@@ -14,5 +14,4 @@ More recently, I needed a tool that could generate metrics in Prometheus to crea
 
 Today, prober has proven to be an excellent way to share knowledge and demonstrate specific scenarios. That’s why I decided to share it here – who knows, it might help someone! If you have suggestions for new features to simulate everyday situations, I’m totally open to ideas!
 
-
 [prober repository](https://github.com/hpettenuci/prober)

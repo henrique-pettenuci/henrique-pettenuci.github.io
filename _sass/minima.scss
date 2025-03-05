@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+
+@charset "utf-8";
+
+//////////////
+// Based on catppuccin-mocha
+
+// Common colors
+$rosewater-color: #f5e0dc;
+$flamingo-color: 	#f2cdcd;
+$pink-color:     	#f5c2e7;
+$mauve-color:    	#cba6f7;
+$red-color:      	#f38ba8;
+$maroon-color:   	#eba0ac;
+$peach-color:    	#fab387;
+$yellow-color:   	#f9e2af;
+$green-color:    	#a6e3a1;
+$teal-color: 	    #94e2d5;
+$sky-color: 	    #89dceb;
+$sapphire-color: 	#74c7ec;
+$blue-color:     	#89b4fa;
+$lavender-color: 	#b4befe;
+
+// Text colors
+$text-color:     	#cdd6f4 !default;
+$subtext0-color: 	#a6adc8;
+$subtext1-color: 	#bac2de;
+
+// Overlays colors
+$overlay0-color: 	#6c7086;
+$overlay1-color: 	#7f849c;
+$overlay2-color: 	#9399b2;
+
+// Surfaces colors
+$surface0-color: 	#313244;
+$surface1-color: 	#45475a;
+$surface2-color: 	#585b70;
+
+// Base/background colors
+$base-color:    	#1e1e2e;
+$mantle-color: 	  #181825;
+$crust-color: 	  #11111b;
+
+//////////////
+
+// General definitions
+$background-color:  $base-color;
+$brand-color:       $teal-color;
+$link-color:        $blue-color;
+
+// Define defaults for each variable.
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/post",
+  "minima/syntax-highlighting"
+;
