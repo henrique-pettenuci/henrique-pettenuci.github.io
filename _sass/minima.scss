@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-
-@charset "utf-8";
-
 //////////////
 // Color schema based on catppuccin-mocha
 
@@ -51,10 +48,26 @@ $link-color:        $blue-color;
 $link-visited-color:darken($link-color, 15%);
 $link-hoverd-color: $link-color;
 
-// Blog post color definitions
+// Blog post list color definitions
+$post-meta-list-color:   $subtext0-color;
+
+// Blog post page color definitions
 $post-header-color: $background-color;
 $post-title-color:  $sapphire-color;
 $post-meta-color:   $subtext0-color;
+$post-meta-bgcolor: $mantle-color;
+
+// Footer color definitions
+$footer-boder-top:  $brand-color;
+$footer-text-color: $subtext1-color;
+
+// Header color definitions
+$header-boder-top:    $crust-color;
+$header-boder-botton: $brand-color;
+$header-title-color:  $brand-color;
+$header-text-color:   $subtext1-color;
+$header-nav-color:    $mantle-color;
+$header-nav-border:   $brand-color;
 
 
 // Define defaults for each variable.
@@ -96,5 +109,7 @@ $on-laptop:        800px !default;
   "minima/base",
   "minima/layout",
   "minima/post",
+  "minima/footer",
+  "minima/header",
   "minima/syntax-highlighting"
 ;
