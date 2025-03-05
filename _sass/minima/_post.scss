@@ -3,18 +3,23 @@
    */
    .post-header {
     margin-bottom: $spacing-unit;
-    background-color: $mantle-color;
+    background-color: $post-header-color;
   }
   
   .post-title {
     @include relative-font-size(2.625);
     letter-spacing: -1px;
     line-height: 1;
-    color: $sapphire-color;
+    color: $post-title-color;
   
     @include media-query($on-laptop) {
       @include relative-font-size(2.25);
     }
+  }
+
+  .post-meta {
+    font-size: $small-font-size;
+    color: $post-meta-color;
   }
   
   .post-content {

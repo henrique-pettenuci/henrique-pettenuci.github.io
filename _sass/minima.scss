@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 //////////////
-// Based on catppuccin-mocha
+// Color schema based on catppuccin-mocha
 
 // Common colors
 $rosewater-color: #f5e0dc;
@@ -44,10 +44,18 @@ $crust-color: 	  #11111b;
 
 //////////////
 
-// General definitions
+// General color definitions
 $background-color:  $base-color;
 $brand-color:       $teal-color;
 $link-color:        $blue-color;
+$link-visited-color:darken($link-color, 15%);
+$link-hoverd-color: $link-color;
+
+// Blog post color definitions
+$post-header-color: $background-color;
+$post-title-color:  $sapphire-color;
+$post-meta-color:   $subtext0-color;
+
 
 // Define defaults for each variable.
 $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
