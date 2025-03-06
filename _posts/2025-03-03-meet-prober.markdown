@@ -2,7 +2,8 @@
 layout: post
 title:  "Meet prober! A simple tool to teach some k8s behaviors"
 date:   2025-03-03 17:40:58 +0000
-categories: prober
+categories: kubernetes
+tags: prober
 ---
 
 Some months ago, I created `prober` – a tool designed to help developers understand the behavior of Kubernetes probes. I used it to simulate both success and failure cases while exploring different configurations and scenarios.
@@ -14,4 +15,4 @@ More recently, I needed a tool that could generate metrics in Prometheus to crea
 
 Today, prober has proven to be an excellent way to share knowledge and demonstrate specific scenarios. That’s why I decided to share it here – who knows, it might help someone! If you have suggestions for new features to simulate everyday situations, I’m totally open to ideas!
 
-[prober repository](https://github.com/hpettenuci/prober)
+Check the [prober repository](https://github.com/hpettenuci/prober) to see more details about this tool!
