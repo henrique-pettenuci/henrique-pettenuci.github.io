@@ -129,5 +129,6 @@ Both labels and annotations are essential for organizing and operating resources
 Understanding these differences and how to use each one can help keep your cluster organized, facilitate automated operations, and improve the overall management of your applications.
 
 For more detailed documentation, please check: 
-[Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
-[Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+- [Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+- [Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
