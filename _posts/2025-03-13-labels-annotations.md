@@ -119,7 +119,7 @@ spec:
 
 ---
 
-Conclusion
+### Conclusion
 
 Both labels and annotations are essential for organizing and operating resources in Kubernetes, but each serves a specific role:
 
@@ -127,3 +127,7 @@ Both labels and annotations are essential for organizing and operating resources
 - **Annotations** enrich resources with additional metadata, allowing tools and operators (like the Prometheus Operator and cert-manager) to extract crucial information for automation, monitoring, and configuration.
 
 Understanding these differences and how to use each one can help keep your cluster organized, facilitate automated operations, and improve the overall management of your applications.
+
+For more detailed documentation, please check: 
+[Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+[Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
