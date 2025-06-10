@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SRE – Curious Like Children"
-date:   2025-06-10 10:30:00 +0000
+date:   2025-06-09 22:00:00 +0000
 categories: sre
 tags: process
 ---
