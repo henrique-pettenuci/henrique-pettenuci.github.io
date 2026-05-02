@@ -13,15 +13,16 @@
  /**
   * Basic styling
   */
- body {
-   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-   color: $text-color;
-   background-color: $background-color;
-   -webkit-text-size-adjust: 100%;
-   -webkit-font-feature-settings: "kern" 1;
-      -moz-font-feature-settings: "kern" 1;
-        -o-font-feature-settings: "kern" 1;
-           font-feature-settings: "kern" 1;
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  background-image: radial-gradient(circle at 10% 15%, rgba($teal-color, 0.16), transparent 35%), radial-gradient(circle at 90% 4%, rgba($mauve-color, 0.16), transparent 30%), linear-gradient(180deg, $base-color 0%, $mantle-color 100%);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
    font-kerning: normal;
    display: flex;
    min-height: 100vh;
@@ -93,27 +94,33 @@
  /**
   * Headings
   */
- h1, h2, h3, h4, h5, h6 {
-   font-weight: $base-font-weight;
- }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $display-font-family;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
  
  
  
  /**
   * Links
   */
- a {
-   color: $link-color;
-   text-decoration: none;
- 
-   &:visited {
-     color: $link-visited-color;
-   }
- 
-   &:hover {
-     color: $link-color;
-     text-decoration: underline;
-   }
+a {
+  color: $link-color;
+  text-decoration: underline;
+  text-decoration-color: rgba($link-color, 0.45);
+  text-underline-offset: 0.2rem;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:hover {
+    color: $link-hoverd-color;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+  }
  
    .social-media-list &:hover {
      text-decoration: none;
@@ -146,14 +153,15 @@
  /**
   * Code formatting
   */
- pre,
- code {
-   @include relative-font-size(0.9375);
-   border: 1px solid $mantle-color;
-   border-radius: 3px;
-   background-color: $rosewater-color;
-   color: $surface0-color;
- }
+pre,
+code {
+  @include relative-font-size(0.9375);
+  font-family: $mono-font-family;
+  border: 1px solid $surface-border;
+  border-radius: $radius-sm;
+  background-color: rgba($crust-color, 0.85);
+  color: $lavender-color;
+}
  
  code {
    padding: 1px 5px;
@@ -175,9 +183,9 @@
  /**
   * Wrapper
   */
- .wrapper {
-   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+.wrapper {
+   width: 85%;
+   max-width: 1440px;
    margin-right: auto;
    margin-left: auto;
    padding-right: $spacing-unit;
@@ -185,12 +193,25 @@
    @extend %clearfix;
  
    @include media-query($on-laptop) {
-     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+     width: 92%;
      padding-right: $spacing-unit * 0.5;
      padding-left: $spacing-unit * 0.5;
-   }
- }
+  }
+}
+
+p {
+  color: $subtext1-color;
+}
+
+strong {
+  color: $text-color;
+}
+
+:focus-visible {
+  outline: 2px solid $yellow-color;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
  
  
  

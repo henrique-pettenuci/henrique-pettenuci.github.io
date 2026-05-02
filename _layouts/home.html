@@ -3,31 +3,52 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  <section class="hero">
+    <p class="hero-kicker">DevOps &amp; SRE Leadership</p>
+    <h1 class="hero-title">{{ site.author.name | default: site.title }}</h1>
+    <p class="hero-description">{{ site.description }}</p>
+    <div class="hero-actions">
+      <a class="button button-ghost" href="{{ '/projects/' | relative_url }}">View Projects</a>
+      <a class="button button-ghost" href="{{ '/about/' | relative_url }}">About Me</a>
+    </div>
+  </section>
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-list-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
+  <section class="section-block">
+    <div class="section-header">
+      <h2 class="section-title">Featured Projects</h2>
+      <a class="section-link" href="{{ '/projects/' | relative_url }}">See all</a>
+    </div>
+    <div class="project-grid">
+      {%- for project in site.projects limit: 3 -%}
+        {%- include project-card.html project=project -%}
       {%- endfor -%}
-    </ul>
+    </div>
+  </section>
 
+  {%- if site.posts.size > 0 -%}
+    <section class="section-block">
+      <div class="section-header">
+        <h2 class="section-title">Recent Writing</h2>
+      </div>
+      <ul class="post-list">
+        {%- for post in site.posts limit: 4 -%}
+        <li class="post-card">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-list-meta">{{ post.date | date: date_format }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if post.excerpt -%}
+            <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </section>
   {%- endif -%}
 
 </div>

@@ -12,6 +12,18 @@ github_username:  henrique-pettenuci
 linkedin_username: hpettenuci
 google_analytics: G-8WS4RVS07C
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
 # Build settings
 theme: minima
 plugins:

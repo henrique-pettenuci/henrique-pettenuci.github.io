@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="project-page">
+
+  <header class="project-page-header">
+    <a class="project-page-back" href="{{ '/projects/' | relative_url }}">← Back to Projects</a>
+    <h1 class="project-page-title">{{ page.name }}</h1>
+    <p class="project-page-role"><strong>Role:</strong> {{ page.role }}</p>
+
+    {%- if page.technologies and page.technologies.size > 0 -%}
+      <ul class="project-tags">
+        {%- for tech in page.technologies -%}
+          <li>{{ tech }}</li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </header>
+
+  <div class="project-page-body">
+    {%- if content and content != "" -%}
+      {{ content }}
+    {%- else -%}
+      <p>{{ page.description }}</p>
+    {%- endif -%}
+  </div>
+
+</article>

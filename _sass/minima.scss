@@ -1,91 +1,99 @@
 @charset "utf-8";
 
 //////////////
-// Color schema based on catppuccin-mocha
+// Catppuccin Frappe palette
 
-// Common colors
-$rosewater-color: #f5e0dc;
-$flamingo-color: 	#f2cdcd;
-$pink-color:     	#f5c2e7;
-$mauve-color:    	#cba6f7;
-$red-color:      	#f38ba8;
-$maroon-color:   	#eba0ac;
-$peach-color:    	#fab387;
-$yellow-color:   	#f9e2af;
-$green-color:    	#a6e3a1;
-$teal-color: 	    #94e2d5;
-$sky-color: 	    #89dceb;
-$sapphire-color: 	#74c7ec;
-$blue-color:     	#89b4fa;
-$lavender-color: 	#b4befe;
+// Accent colors
+$rosewater-color: #f2d5cf;
+$flamingo-color:  #eebebe;
+$pink-color:      #f4b8e4;
+$mauve-color:     #ca9ee6;
+$red-color:       #e78284;
+$maroon-color:    #ea999c;
+$peach-color:     #ef9f76;
+$yellow-color:    #e5c890;
+$green-color:     #a6d189;
+$teal-color:      #81c8be;
+$sky-color:       #99d1db;
+$sapphire-color:  #85c1dc;
+$blue-color:      #8caaee;
+$lavender-color:  #babbf1;
 
 // Text colors
-$text-color:     	#cdd6f4 !default;
-$subtext0-color: 	#a6adc8;
-$subtext1-color: 	#bac2de;
+$text-color:      #c6d0f5 !default;
+$subtext0-color:  #a5adce;
+$subtext1-color:  #b5bfe2;
 
-// Overlays colors
-$overlay0-color: 	#6c7086;
-$overlay1-color: 	#7f849c;
-$overlay2-color: 	#9399b2;
+// Overlay colors
+$overlay0-color:  #737994;
+$overlay1-color:  #838ba7;
+$overlay2-color:  #949cbb;
 
-// Surfaces colors
-$surface0-color: 	#313244;
-$surface1-color: 	#45475a;
-$surface2-color: 	#585b70;
+// Surface colors
+$surface0-color:  #414559;
+$surface1-color:  #51576d;
+$surface2-color:  #626880;
 
-// Base/background colors
-$base-color:    	#1e1e2e;
-$mantle-color: 	  #181825;
-$crust-color: 	  #11111b;
+// Base colors
+$base-color:      #303446;
+$mantle-color:    #292c3c;
+$crust-color:     #232634;
 
 //////////////
 
-// General color definitions
-$background-color:  $base-color;
-$brand-color:       $teal-color;
-$link-color:        $blue-color;
-$link-visited-color:darken($link-color, 15%);
-$link-hoverd-color: $link-color;
+// Semantic colors
+$background-color:   $base-color;
+$brand-color:        $teal-color;
+$link-color:         $sky-color;
+$link-visited-color: $lavender-color;
+$link-hoverd-color:  lighten($link-color, 8%);
+$surface-card-color: rgba($surface0-color, 0.72);
+$surface-border:     rgba($overlay1-color, 0.34);
+$surface-highlight:  rgba($surface2-color, 0.24);
 
 // Blog post list color definitions
-$post-meta-list-color:   $subtext0-color;
+$post-meta-list-color: $subtext0-color;
 
 // Blog post page color definitions
 $post-header-color: $background-color;
 $post-title-color:  $sapphire-color;
 $post-meta-color:   $subtext0-color;
-$post-meta-bgcolor: $mantle-color;
+$post-meta-bgcolor: rgba($mantle-color, 0.9);
 
 // Footer color definitions
-$footer-boder-top:  $brand-color;
+$footer-boder-top:  rgba($overlay2-color, 0.35);
 $footer-text-color: $subtext1-color;
 
 // Header color definitions
-$header-boder-top:    $crust-color;
-$header-boder-botton: $brand-color;
-$header-title-color:  $brand-color;
+$header-boder-top:    transparent;
+$header-boder-botton: rgba($overlay1-color, 0.35);
+$header-title-color:  $rosewater-color;
 $header-text-color:   $subtext1-color;
-$header-nav-color:    $mantle-color;
-$header-nav-border:   $brand-color;
+$header-nav-color:    rgba($mantle-color, 0.95);
+$header-nav-border:   rgba($overlay2-color, 0.4);
 
 
 // Define defaults for each variable.
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-size:   16px !default;
+$base-font-family: "Instrument Sans", "Segoe UI", sans-serif !default;
+$display-font-family: "Space Grotesk", "Instrument Sans", sans-serif !default;
+$mono-font-family: "JetBrains Mono", "SFMono-Regular", Menlo, monospace !default;
+$base-font-size:   17px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-line-height: 1.65 !default;
 
-$spacing-unit:     30px !default;
+$spacing-unit:     28px !default;
+$radius-lg:        18px !default;
+$radius-md:        12px !default;
+$radius-sm:        8px !default;
 
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    960px !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-palm:          680px !default;
+$on-laptop:        960px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {

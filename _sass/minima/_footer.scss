@@ -1,6 +1,7 @@
 .site-footer {
     border-top: 1px solid $footer-boder-top;
     padding: $spacing-unit 0;
+    background-color: rgba($crust-color, 0.48);
   }
   
   .footer-heading {
@@ -40,6 +41,15 @@
   .footer-col-3 {
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
+  }
+
+  .feed-subscribe a {
+    text-decoration: none;
+    color: $sky-color;
+  }
+
+  .feed-subscribe a:hover {
+    text-decoration: underline;
   }
   
   @include media-query($on-laptop) {
