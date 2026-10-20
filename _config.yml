@@ -2,12 +2,16 @@ title: Henrique Pettenuci
 author:
   name: Henrique Pettenuci
   email: henrique@pettenuci.com
+  twitter: hmp_pc
 description: >-
-  This is my personal website. A place that I use to share my daily experiences,
-  projects and ideas.
+  Technology leader in DevOps and SRE, writing about platform and cloud
+  strategy, reliability, cloud economics and engineering operating models.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.pettenuci.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: hmp_pc
+twitter:
+  username: hmp_pc
+  card: summary_large_image
+locale: en_US
 github_username:  henrique-pettenuci
 linkedin_username: hpettenuci
 google_analytics: G-8WS4RVS07C
@@ -20,6 +24,10 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      image: /assets/img/about.jpg
+  - scope:
+      path: ""
       type: projects
     values:
       layout: project
@@ -28,6 +36,8 @@ defaults:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -2,6 +2,7 @@
 layout: page
 title: Curriculum
 permalink: /curriculum/
+description: Full curriculum vitae of Henrique Pettenuci.
 ---
 
 ## Work Experience

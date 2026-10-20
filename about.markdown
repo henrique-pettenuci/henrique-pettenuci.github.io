@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+description: Career arc from building and operating systems to technical leadership in DevOps and SRE.
 ---
 
 <div class="about-profile">
@@ -16,3 +17,5 @@ Over time, my career expanded into the realm of cloud native solutions. I've suc
 Advancing in my career, I moved from executing technical projects to taking on leadership roles. As a Tech Lead, I made key technical decisions, guided my team of DevOps Engineers, and planned critical roadmap improvements. Today, as DevOps & SRE Manager, I steer strategic planning, align cross-functional teams, manage talent, and oversee high-level project reviews, consistently driving solutions that support business objectives.
   </div>
 </div>
+
+{% include cta.html %}
