@@ -33,20 +33,17 @@
 
   .post-list-meta {
     font-size: $small-font-size;
-    color: $post-meta-list-color;
+    color: var(--text-muted);
   }
 
   .home {
     display: grid;
-    gap: $spacing-unit;
+    gap: $spacing-unit * 1.5;
   }
 
   .hero {
-    background: linear-gradient(145deg, rgba($surface0-color, 0.84), rgba($mantle-color, 0.9));
-    border: 1px solid $surface-border;
-    border-radius: $radius-lg;
-    padding: $spacing-unit * 1.25;
-    box-shadow: 0 22px 45px rgba($crust-color, 0.38);
+    border-bottom: 1px solid var(--border);
+    padding: $spacing-unit * 1.5 0 $spacing-unit * 1.75;
   }
 
   .hero-kicker {
@@ -54,18 +51,20 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: $teal-color;
-    margin-bottom: 0.5rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
   }
 
   .hero-title {
-    margin-bottom: 0.45rem;
-    @include relative-font-size(2.4);
+    margin-bottom: 0.6rem;
+    line-height: 1.1;
+    @include relative-font-size(3);
   }
 
   .hero-description {
-    max-width: 100%;
-    color: $subtext1-color;
+    max-width: 60ch;
+    @include relative-font-size(1.15);
+    color: $muted-color;
     margin-bottom: $spacing-unit * 0.8;
   }
 
@@ -79,47 +78,50 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.62rem 1rem;
-    border-radius: 999px;
+    padding: 0.62rem 1.1rem;
+    border-radius: $radius-sm;
     border: 1px solid transparent;
     font-weight: 600;
     text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 
     &:hover {
       text-decoration: none;
-      transform: translateY(-1px);
     }
   }
 
   .button-primary {
-    background-color: $peach-color;
-    color: $base-color;
-    font-weight: 700;
-    box-shadow: 0 8px 28px rgba($peach-color, 0.35);
-    border: 2px solid darken($peach-color, 8%);
+    background-color: var(--accent);
+    color: var(--on-accent);
+    border-color: var(--accent);
 
     &:hover {
-      background-color: lighten($peach-color, 6%);
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: var(--on-accent);
     }
   }
 
   .button-ghost {
-    color: $subtext1-color;
-    border-color: rgba($overlay1-color, 0.6);
-    background-color: rgba($surface1-color, 0.28);
+    color: var(--text);
+    border-color: var(--text-muted);
+    background-color: transparent;
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
   }
 
   .button-view {
-    color: $sky-color;
-    border-color: rgba($sky-color, 0.5);
-    background-color: rgba($sky-color, 0.08);
+    color: var(--accent);
+    border-color: var(--accent);
+    background-color: transparent;
     font-size: 0.88rem;
     padding: 0.45rem 0.9rem;
 
     &:hover {
-      background-color: rgba($sky-color, 0.18);
-      color: lighten($sky-color, 8%);
+      background-color: var(--accent);
+      color: var(--on-accent);
     }
   }
 
@@ -144,23 +146,22 @@
   .project-page-back {
     display: inline-block;
     font-size: 0.9rem;
-    color: $subtext1-color;
-    text-decoration: none;
+    color: var(--text-muted);
     margin-bottom: $spacing-unit * 0.65;
 
     &:hover {
-      color: $text-color;
+      color: var(--accent);
     }
   }
 
   .project-page-title {
     @include relative-font-size(2.2);
-    color: $post-title-color;
+    color: var(--text);
     margin-bottom: 0.4rem;
   }
 
   .project-page-role {
-    color: $subtext1-color;
+    color: $muted-color;
     margin-bottom: $spacing-unit * 0.5;
   }
 
@@ -176,10 +177,17 @@
   }
 
   .section-block {
-    background-color: $surface-card-color;
-    border: 1px solid $surface-border;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
     border-radius: $radius-lg;
     padding: $spacing-unit;
+  }
+
+  .cta-block p {
+    max-width: none;
+    margin-bottom: 0;
+    @include relative-font-size(1.1);
+    color: var(--text);
   }
 
   .section-header {
@@ -197,7 +205,7 @@
 
   .section-link {
     font-size: 0.95rem;
-    color: $sky-color;
+    color: var(--accent);
   }
 
   .project-grid {
@@ -208,8 +216,8 @@
 
   .project-card,
   .post-card {
-    background-color: rgba($surface1-color, 0.34);
-    border: 1px solid $surface-border;
+    background-color: var(--bg);
+    border: 1px solid var(--border);
     border-radius: $radius-md;
     padding: $spacing-unit * 0.75;
   }
@@ -233,25 +241,25 @@
   }
 
   .project-status {
-    border-radius: 999px;
+    border-radius: $radius-sm;
     padding: 0.22rem 0.58rem;
     font-size: 0.76rem;
     font-weight: 600;
   }
 
   .project-status-active {
-    color: $crust-color;
-    background-color: $green-color;
+    color: var(--status-active-text);
+    background-color: var(--status-active-bg);
   }
 
   .project-status-completed {
-    color: $base-color;
-    background-color: $sky-color;
+    color: var(--status-done-text);
+    background-color: var(--status-done-bg);
   }
 
   .project-status-archived {
-    color: $text-color;
-    background-color: $surface2-color;
+    color: var(--status-archived-text);
+    background-color: var(--status-archived-bg);
   }
 
   .project-summary,
@@ -264,7 +272,7 @@
   .project-outcomes {
     margin: 0;
     padding-left: 1.1rem;
-    color: $subtext1-color;
+    color: $muted-color;
     display: grid;
     gap: 0.35rem;
   }
@@ -278,12 +286,12 @@
   }
 
   .project-tags li {
-    border-radius: 999px;
+    border-radius: $radius-sm;
     padding: 0.15rem 0.55rem;
     font-size: 0.78rem;
-    color: $lavender-color;
-    background-color: rgba($surface2-color, 0.25);
-    border: 1px solid rgba($overlay2-color, 0.33);
+    color: var(--text);
+    background-color: var(--chip-bg);
+    border: 1px solid var(--border);
   }
 
   .project-links {
@@ -295,6 +303,11 @@
 
   .post-card {
     margin-bottom: 0;
+  }
+
+  .post-card h2,
+  .post-card h3 {
+    @include relative-font-size(1.2);
   }
 
   .post-card p {
@@ -309,11 +322,11 @@
 
   @include media-query($on-palm) {
     .hero {
-      padding: $spacing-unit;
+      padding: $spacing-unit 0;
     }
 
     .hero-title {
-      @include relative-font-size(2);
+      @include relative-font-size(2.25);
     }
 
     .section-block {

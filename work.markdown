@@ -9,6 +9,6 @@ This page highlights initiatives I manage or have recently executed across DevOp
 
 <div class="project-grid">
   {%- for project in site.projects -%}
-    {%- include project-card.html project=project -%}
+    {%- include project-card.html project=project heading="h2" -%}
   {%- endfor -%}
 </div>

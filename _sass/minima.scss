@@ -1,96 +1,90 @@
 @charset "utf-8";
 
 //////////////
-// Catppuccin Frappe palette
+// Theme: light by default, dark via prefers-color-scheme.
+// Components use the CSS custom properties below; Catppuccin Mocha is kept for code blocks only.
 
-// Accent colors
-$rosewater-color: #f2d5cf;
-$flamingo-color:  #eebebe;
-$pink-color:      #f4b8e4;
-$mauve-color:     #ca9ee6;
-$red-color:       #e78284;
-$maroon-color:    #ea999c;
-$peach-color:     #ef9f76;
-$yellow-color:    #e5c890;
-$green-color:     #a6d189;
-$teal-color:      #81c8be;
-$sky-color:       #99d1db;
-$sapphire-color:  #85c1dc;
-$blue-color:      #8caaee;
-$lavender-color:  #babbf1;
+:root {
+  color-scheme: light dark;
 
-// Text colors
-$text-color:      #c6d0f5 !default;
-$subtext0-color:  #a5adce;
-$subtext1-color:  #b5bfe2;
+  --bg:           #ffffff;
+  --surface:      #f5f7f7;
+  --border:       #d3dbdc;
+  --text:         #12171a;
+  --text-muted:   #455156;
+  --accent:       #0f766e;
+  --accent-hover: #0a524d;
+  --on-accent:    #ffffff;
+  --focus:        #0f766e;
+  --chip-bg:      #e6f2f1;
+  --status-active-bg:    #dcfce7;
+  --status-active-text:  #14532d;
+  --status-done-bg:      #ccfbf1;
+  --status-done-text:    #134e4a;
+  --status-archived-bg:  #e5e9ea;
+  --status-archived-text:#2d373b;
+}
 
-// Overlay colors
-$overlay0-color:  #737994;
-$overlay1-color:  #838ba7;
-$overlay2-color:  #949cbb;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:           #0f1214;
+    --surface:      #171b1e;
+    --border:       #2c353a;
+    --text:         #eaeeef;
+    --text-muted:   #a7b3b6;
+    --accent:       #5eead4;
+    --accent-hover: #99f6e4;
+    --on-accent:    #06201d;
+    --focus:        #5eead4;
+    --chip-bg:      #1b2a29;
+    --status-active-bg:    #14532d;
+    --status-active-text:  #dcfce7;
+    --status-done-bg:      #134e4a;
+    --status-done-text:    #ccfbf1;
+    --status-archived-bg:  #2c353a;
+    --status-archived-text:#d3dbdc;
+  }
+}
 
-// Surface colors
-$surface0-color:  #414559;
-$surface1-color:  #51576d;
-$surface2-color:  #626880;
+// Catppuccin Mocha (code blocks)
+$code-base:     #1e1e2e;
+$code-mantle:   #181825;
+$code-surface0: #313244;
+$code-text:     #cdd6f4;
+$code-overlay1: #7f849c;
+$code-red:      #f38ba8;
+$code-peach:    #fab387;
+$code-yellow:   #f9e2af;
+$code-green:    #a6e3a1;
+$code-teal:     #94e2d5;
+$code-sky:      #89dceb;
+$code-blue:     #89b4fa;
+$code-mauve:    #cba6f7;
 
-// Base colors
-$base-color:      #303446;
-$mantle-color:    #292c3c;
-$crust-color:     #232634;
-
-//////////////
-
-// Semantic colors
-$background-color:   $base-color;
-$brand-color:        $teal-color;
-$link-color:         $sky-color;
-$link-visited-color: $lavender-color;
-$link-hoverd-color:  lighten($link-color, 8%);
-$surface-card-color: rgba($surface0-color, 0.72);
-$surface-border:     rgba($overlay1-color, 0.34);
-$surface-highlight:  rgba($surface2-color, 0.24);
-
-// Blog post list color definitions
-$post-meta-list-color: $subtext0-color;
-
-// Blog post page color definitions
-$post-header-color: $background-color;
-$post-title-color:  $sapphire-color;
-$post-meta-color:   $subtext0-color;
-$post-meta-bgcolor: rgba($mantle-color, 0.9);
-
-// Footer color definitions
-$footer-boder-top:  rgba($overlay2-color, 0.35);
-$footer-text-color: $subtext1-color;
-
-// Header color definitions
-$header-boder-top:    transparent;
-$header-boder-botton: rgba($overlay1-color, 0.35);
-$header-title-color:  $rosewater-color;
-$header-text-color:   $subtext1-color;
-$header-nav-color:    rgba($mantle-color, 0.95);
-$header-nav-border:   rgba($overlay2-color, 0.4);
-
+// Semantic aliases
+$text-color:    var(--text);
+$muted-color:   var(--text-muted);
+$link-color:    var(--accent);
+$surface-border: var(--border);
 
 // Define defaults for each variable.
 $base-font-family: "Instrument Sans", "Segoe UI", sans-serif !default;
 $display-font-family: "Space Grotesk", "Instrument Sans", sans-serif !default;
 $mono-font-family: "JetBrains Mono", "SFMono-Regular", Menlo, monospace !default;
-$base-font-size:   17px !default;
+$base-font-size:   18px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.65 !default;
+$base-line-height: 1.7 !default;
 
-$spacing-unit:     28px !default;
-$radius-lg:        18px !default;
-$radius-md:        12px !default;
-$radius-sm:        8px !default;
+$spacing-unit:     32px !default;
+$radius-lg:        8px !default;
+$radius-md:        6px !default;
+$radius-sm:        4px !default;
 
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    960px !default;
+$content-width:    1080px !default;
 
 $on-palm:          680px !default;
 $on-laptop:        960px !default;
