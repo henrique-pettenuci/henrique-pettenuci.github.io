@@ -1,123 +1,55 @@
 @charset "utf-8";
 
-//////////////
-// Catppuccin Frappe palette
-
-// Accent colors
-$rosewater-color: #f2d5cf;
-$flamingo-color:  #eebebe;
-$pink-color:      #f4b8e4;
-$mauve-color:     #ca9ee6;
-$red-color:       #e78284;
-$maroon-color:    #ea999c;
-$peach-color:     #ef9f76;
-$yellow-color:    #e5c890;
-$green-color:     #a6d189;
-$teal-color:      #81c8be;
-$sky-color:       #99d1db;
-$sapphire-color:  #85c1dc;
-$blue-color:      #8caaee;
-$lavender-color:  #babbf1;
-
-// Text colors
-$text-color:      #c6d0f5 !default;
-$subtext0-color:  #a5adce;
-$subtext1-color:  #b5bfe2;
-
-// Overlay colors
-$overlay0-color:  #737994;
-$overlay1-color:  #838ba7;
-$overlay2-color:  #949cbb;
-
-// Surface colors
-$surface0-color:  #414559;
-$surface1-color:  #51576d;
-$surface2-color:  #626880;
-
-// Base colors
-$base-color:      #303446;
-$mantle-color:    #292c3c;
-$crust-color:     #232634;
+@use "minima/base";
+@use "minima/layout";
+@use "minima/post";
+@use "minima/footer";
+@use "minima/header";
+@use "minima/syntax-highlighting";
 
 //////////////
+// Theme: light by default, dark via prefers-color-scheme.
+// Components use the CSS custom properties below; Catppuccin Mocha is kept for code blocks only.
 
-// Semantic colors
-$background-color:   $base-color;
-$brand-color:        $teal-color;
-$link-color:         $sky-color;
-$link-visited-color: $lavender-color;
-$link-hoverd-color:  lighten($link-color, 8%);
-$surface-card-color: rgba($surface0-color, 0.72);
-$surface-border:     rgba($overlay1-color, 0.34);
-$surface-highlight:  rgba($surface2-color, 0.24);
+:root {
+  color-scheme: light dark;
 
-// Blog post list color definitions
-$post-meta-list-color: $subtext0-color;
+  --bg:           #ffffff;
+  --surface:      #f5f7f7;
+  --border:       #d3dbdc;
+  --text:         #12171a;
+  --text-muted:   #455156;
+  --accent:       #0f766e;
+  --accent-hover: #0a524d;
+  --on-accent:    #ffffff;
+  --focus:        #0f766e;
+  --chip-bg:      #e6f2f1;
+  --status-active-bg:    #dcfce7;
+  --status-active-text:  #14532d;
+  --status-done-bg:      #ccfbf1;
+  --status-done-text:    #134e4a;
+  --status-archived-bg:  #e5e9ea;
+  --status-archived-text:#2d373b;
+}
 
-// Blog post page color definitions
-$post-header-color: $background-color;
-$post-title-color:  $sapphire-color;
-$post-meta-color:   $subtext0-color;
-$post-meta-bgcolor: rgba($mantle-color, 0.9);
-
-// Footer color definitions
-$footer-boder-top:  rgba($overlay2-color, 0.35);
-$footer-text-color: $subtext1-color;
-
-// Header color definitions
-$header-boder-top:    transparent;
-$header-boder-botton: rgba($overlay1-color, 0.35);
-$header-title-color:  $rosewater-color;
-$header-text-color:   $subtext1-color;
-$header-nav-color:    rgba($mantle-color, 0.95);
-$header-nav-border:   rgba($overlay2-color, 0.4);
-
-
-// Define defaults for each variable.
-$base-font-family: "Instrument Sans", "Segoe UI", sans-serif !default;
-$display-font-family: "Space Grotesk", "Instrument Sans", sans-serif !default;
-$mono-font-family: "JetBrains Mono", "SFMono-Regular", Menlo, monospace !default;
-$base-font-size:   17px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.65 !default;
-
-$spacing-unit:     28px !default;
-$radius-lg:        18px !default;
-$radius-md:        12px !default;
-$radius-sm:        8px !default;
-
-$table-text-align: left !default;
-
-// Width of the content area
-$content-width:    960px !default;
-
-$on-palm:          680px !default;
-$on-laptop:        960px !default;
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:           #0f1214;
+    --surface:      #171b1e;
+    --border:       #2c353a;
+    --text:         #eaeeef;
+    --text-muted:   #a7b3b6;
+    --accent:       #5eead4;
+    --accent-hover: #99f6e4;
+    --on-accent:    #06201d;
+    --focus:        #5eead4;
+    --chip-bg:      #1b2a29;
+    --status-active-bg:    #14532d;
+    --status-active-text:  #dcfce7;
+    --status-done-bg:      #134e4a;
+    --status-done-text:    #ccfbf1;
+    --status-archived-bg:  #2c353a;
+    --status-archived-text:#d3dbdc;
   }
 }
 
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
-}
-
-// Import partials.
-@import
-  "minima/base",
-  "minima/layout",
-  "minima/post",
-  "minima/footer",
-  "minima/header",
-  "minima/syntax-highlighting"
-;

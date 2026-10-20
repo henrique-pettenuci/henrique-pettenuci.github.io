@@ -1,7 +1,9 @@
+@use "variables" as *;
+
 .site-footer {
-    border-top: 1px solid $footer-boder-top;
+    border-top: 1px solid var(--border);
     padding: $spacing-unit 0;
-    background-color: rgba($crust-color, 0.48);
+    background-color: var(--surface);
   }
   
   .footer-heading {
@@ -17,9 +19,9 @@
   
   .footer-col-wrapper {
     @include relative-font-size(0.9375);
-    color: $footer-text-color;
+    color: var(--text-muted);
     margin-left: -$spacing-unit * 0.5;
-    @extend %clearfix;
+    @include clearfix;
   }
   
   .footer-col {
@@ -45,7 +47,7 @@
 
   .feed-subscribe a {
     text-decoration: none;
-    color: $sky-color;
+    color: var(--accent);
   }
 
   .feed-subscribe a:hover {

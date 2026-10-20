@@ -11,11 +11,11 @@ description: Notes on platform and cloud strategy, reliability, cloud economics 
     <li class="post-card">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <span class="post-list-meta">{{ post.date | date: date_format }}</span>
-      <h3>
+      <h2>
         <a class="post-link" href="{{ post.url | relative_url }}">
           {{ post.title | escape }}
         </a>
-      </h3>
+      </h2>
       {%- if post.excerpt -%}
         <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
       {%- endif -%}
