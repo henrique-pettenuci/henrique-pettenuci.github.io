@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 /**
  * Reset some basic elements
  */
@@ -35,8 +37,7 @@ body {
   */
  h1, h2, h3, h4, h5, h6,
  p, blockquote, pre,
- ul, ol, dl, figure,
- %vertical-rhythm {
+ ul, ol, dl, figure {
    margin-bottom: $spacing-unit * 0.5;
  }
  
@@ -196,7 +197,7 @@ pre {
    margin-left: auto;
    padding-right: $spacing-unit;
    padding-left: $spacing-unit;
-   @extend %clearfix;
+   @include clearfix;
  
    @include media-query($on-laptop) {
      width: 92%;
@@ -234,17 +235,6 @@ strong {
   outline-offset: 2px;
   border-radius: 4px;
 }
- 
- 
- 
- /**
-  * Clearfix
-  */
- %clearfix:after {
-   content: "";
-   display: table;
-   clear: both;
- }
  
  
  

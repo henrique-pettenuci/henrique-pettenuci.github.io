@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 /**
  * Syntax highlighting: Catppuccin Mocha, used for code blocks in both light and dark modes
  */
@@ -5,7 +7,7 @@
   background: $code-base;
   color: $code-text;
   border-radius: $radius-sm;
-  @extend %vertical-rhythm;
+  margin-bottom: $spacing-unit * 0.5;
 
   pre {
     background: transparent;
