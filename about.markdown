@@ -16,7 +16,7 @@ I started in IT support and software development, then spent years running syste
 
 Cloud was the next step. I helped migrate legacy applications to AWS, moved infrastructure into code and version control, and sat on the technology board that set architectural standards. I then moved into a DevOps role focused on CI/CD, delivery metrics and shared engineering practices.
 
-Since 2021 I've worked at Trustly, first as a Staff DevOps Engineer and tech lead, and now as DevOps & SRE Manager. The work changed from building systems to building the conditions around them. That meant creating an incident-management practice and an SRE team, defining an infrastructure-as-code lifecycle so changes are repeatable, leading a zero-downtime Kubernetes migration, and helping the team use AI in its daily work.
+Over time I moved from hands-on engineering to tech lead, and then to managing a DevOps and SRE team. The work changed from building systems to building the conditions around them. That meant creating an incident-management practice and an SRE team, defining an infrastructure-as-code lifecycle so changes are repeatable, leading a zero-downtime Kubernetes migration, and helping the team use AI in its daily work.
 
 What ties it together is that technology decisions are also organizational decisions: how teams are structured, how incidents become learning, and how reliability, cost and delivery speed are balanced. That is the intersection I work in, and the one I write about here.
   </div>
