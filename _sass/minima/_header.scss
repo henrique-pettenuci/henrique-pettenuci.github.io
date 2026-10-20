@@ -20,15 +20,30 @@
     float: left;
     color: $header-title-color;
     text-decoration: none;
-    cursor: default;
+    &:hover {
+      color: $header-title-color;
+    }
   }
   
   .site-nav {
     float: right;
     line-height: $base-line-height * $base-font-size * 2.25;
   
+    // Visually hidden (not display:none) so the menu toggle stays keyboard-focusable
     .nav-trigger {
-        display: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        border: 0;
+    }
+
+    .nav-trigger:focus-visible + label {
+        outline: 2px solid $yellow-color;
+        outline-offset: 2px;
     }
   
     .menu-icon {
@@ -46,8 +61,15 @@
         margin-right: 20px;
       }
 
-      &:hover {
+      &:hover,
+      &[aria-current="page"] {
         color: $text-color;
+      }
+
+      &[aria-current="page"] {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        text-decoration-thickness: 2px;
       }
     }
   

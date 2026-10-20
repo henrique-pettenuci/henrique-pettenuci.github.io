@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+description: Career arc from building and operating systems to technical leadership in DevOps and SRE.
 ---
 
 <div class="about-profile">
