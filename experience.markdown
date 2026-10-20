@@ -10,3 +10,5 @@ I lead DevOps and SRE at Trustly, where the work centers on platform and cloud s
 This page is being reworked to focus on scope, decisions, complexity and impact rather than lists of responsibilities.
 
 For the full chronological history, see the [full curriculum]({{ '/curriculum/' | relative_url }}).
+
+{% include cta.html %}
