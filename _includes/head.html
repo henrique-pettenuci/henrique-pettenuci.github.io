@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     {%- seo -%}
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M" }}">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     {%- feed_meta -%}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
